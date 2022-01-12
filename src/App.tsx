@@ -9,6 +9,16 @@ const App: FC = () => {
 	const [value, setValue] = React.useState("");
 	const [todos, setTodos] = React.useState<ITodo[]>([]);
 
+	const inputRef = React.useRef<HTMLInputElement>(null);
+
+	const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+		setValue(e.target.value);
+	};
+
+	const handleKeyDown: React.KeyboardEventHandler<HTMLInputElement> = (e) => {
+		if (e.key === 'Enter') addTodo();
+	};
+
 	const addTodo = () => {
 		if (value.trim().length) {
 			setTodos([
@@ -37,19 +47,24 @@ const App: FC = () => {
                 return item;
             })
         );
-        
-    }
+    };
 
     const removeTodo = (id: number): void => {
         setTodos(todos.filter(todo => todo.id !== id))
     }
 
+	React.useEffect(() => {
+		if(inputRef.current) inputRef.current.focus();
+	}, []);
+
 	return (
 		<div className="App">
 			<input
+				onKeyDown={handleKeyDown}
+				ref={inputRef}
 				type="text"
 				value={value}
-				onChange={(e) => setValue(e.target.value)}
+				onChange={handleChange}
 			/>
 			<button onClick={addTodo}>Send</button>
 
