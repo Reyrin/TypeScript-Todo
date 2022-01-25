@@ -10,7 +10,7 @@ interface ITodoListProps {
 
 const TodoList: FC<ITodoListProps> = ({items, completeTodo, removeTodo}) => {
     return (
-        <ul className='TodoList'>
+        <ul className='todo-list'>
             {items.map((item) => 
                 <TodoItem key={item.id} {...item} completeTodo={completeTodo} removeTodo={removeTodo} />
             )}

@@ -13,13 +13,14 @@ const TodoItem: FC<ITodoItem> = ({id, completed, title, completeTodo, removeTodo
 				type="checkBox"
 				checked={completed}
 				onChange={() => completeTodo(id)}
+				className="checkBox"
 			/>
 			<div
 				style={{ textDecoration: completed ? "line-through" : "" }}
 			>
 				{title}
 			</div>
-			<button onClick={() => removeTodo(id)}>X</button>
+			<button onClick={() => removeTodo(id)} className="remove-btn">&#10006;</button>
 		</li>
 	);
 };

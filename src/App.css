@@ -1,3 +1,89 @@
-.App {
-  text-align: center;
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif;
+	background: rgb(47, 116, 192);
+	background: linear-gradient(
+		135deg,
+		rgba(47, 116, 192, 1) 0%,
+		rgba(97, 218, 251, 1) 100%
+	);
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.todo {
+	width: 400px;
+	min-height: 500px;
+	padding: 15px;
+	background-color: #EBFEFF;
+	border-radius: 20px;
+	text-align: center;
+}
+
+.input-todo {
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 10px;
+	background-color: transparent;
+	margin: 0 5px;
+	font-weight: 600;
+}
+
+.add-btn {
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 10px;
+	background-color: transparent;
+	font-weight: 500;
+	margin: 0 5px;
+	cursor: pointer;
+	transition: transform .1s ease-in-out;
+}
+
+.add-btn:active {
+	transform: translateX(2px);
+}
+
+.remove-btn {
+	background-color: transparent;
+	border: 1px solid #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	transition: transform .1s ease-in-out;
+}
+
+.remove-btn:active {
+	transform: translateY(2px);
+}
+
+.todo-list {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.todo-list li {
+	font-size: 18px;
+	font-weight: bold;
+	border-bottom: 1px solid #000;
+	width: 100%;
+	padding: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.checkBox {
+	width: 25px;
+    height: 25px;
 }
