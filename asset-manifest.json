@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/TypeScript-Todo/static/css/main.36f6bdac.css",
-    "main.js": "/TypeScript-Todo/static/js/main.e244748d.js",
+    "main.css": "/TypeScript-Todo/static/css/main.e9e87a67.css",
+    "main.js": "/TypeScript-Todo/static/js/main.206ee5f9.js",
     "index.html": "/TypeScript-Todo/index.html",
-    "main.36f6bdac.css.map": "/TypeScript-Todo/static/css/main.36f6bdac.css.map",
-    "main.e244748d.js.map": "/TypeScript-Todo/static/js/main.e244748d.js.map"
+    "main.e9e87a67.css.map": "/TypeScript-Todo/static/css/main.e9e87a67.css.map",
+    "main.206ee5f9.js.map": "/TypeScript-Todo/static/js/main.206ee5f9.js.map"
   },
   "entrypoints": [
-    "static/css/main.36f6bdac.css",
-    "static/js/main.e244748d.js"
+    "static/css/main.e9e87a67.css",
+    "static/js/main.206ee5f9.js"
   ]
 }
